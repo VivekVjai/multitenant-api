@@ -63,9 +63,12 @@ DATABASES = {
         "PASSWORD": os.getenv("DB_PASSWORD"),
         "HOST": os.getenv("DB_HOST"),
         "PORT": os.getenv("DB_PORT"),
-        "OPTIONS": {"sslmode": "require"},
     }
 }
+
+db_sslmode = os.getenv("DB_SSLMODE")
+if db_sslmode:
+    DATABASES["default"]["OPTIONS"] = {"sslmode": db_sslmode}
 
 
 AUTH_PASSWORD_VALIDATORS = [
