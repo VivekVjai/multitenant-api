@@ -16,7 +16,7 @@ Production environment configuration
 
 Live Health Check (Azure)
 
-✅ API Health Endpoint:
+API Health Endpoint:
 
 GET /health/
 
@@ -28,7 +28,7 @@ Expected response:
   "db": "connected"
 }
 
-🧱 Tech Stack
+Tech Stack
 
 Backend: Django (Python)
 
@@ -42,14 +42,14 @@ CI/CD: GitHub Actions
 
 Web Server: Gunicorn
 
-📌 Features
+Features
 
-✅ Multi-tenant architecture
-✅ Tenant-aware indexing & constraints
-✅ Health endpoint for production monitoring
-✅ Dockerized Django production build
-✅ Azure deployment-ready environment setup
-✅ GitHub Actions pipeline:
+Multi-tenant architecture
+Tenant-aware indexing & constraints
+Health endpoint for production monitoring
+Dockerized Django production build
+Azure deployment-ready environment setup
+GitHub Actions pipeline:
 
 runs tests
 
@@ -80,24 +80,24 @@ DB_PORT=5432
 
 PAYMENT_WEBHOOK_SECRET=super-secret-key
 
-🐳 Run Locally (Docker)
-1️⃣ Clone Repo
+Run Locally (Docker)
+1️ Clone Repo
 git clone https://github.com/VivekVjai/multitenant-api.git
 cd multitenant-api
 
-2️⃣ Build and Run
+2️ Build and Run
 docker compose up --build
 
-3️⃣ Run Migrations
+3️ Run Migrations
 docker compose exec web python manage.py migrate
 
-4️⃣ Test API
+4️ Test API
 http://127.0.0.1:8000/health/
 
-🧪 Run Tests (CI Style)
+Run Tests (CI Style)
 python manage.py test
 
-🔄 CI/CD Pipeline (GitHub Actions)
+CI/CD Pipeline (GitHub Actions)
 
 This project includes a full CI/CD pipeline located at:
 
@@ -106,7 +106,7 @@ This project includes a full CI/CD pipeline located at:
 
 Pipeline steps:
 
-✅ CI
+CI
 
 Spin up PostgreSQL service
 
@@ -118,7 +118,7 @@ Run migrations
 
 Run tests
 
-✅ CD
+CD
 
 Build Docker image
 
@@ -126,7 +126,7 @@ Push to Docker Hub
 
 Deploy container to Azure Web App
 
-☁️ Deployment (Azure)
+Deployment (Azure)
 
 Deployed using:
 
@@ -140,7 +140,7 @@ Important Azure env var:
 
 WEBSITES_PORT=8000
 
-🔐 Security Notes
+Security Notes
 
 This repository does NOT contain:
 
@@ -155,9 +155,9 @@ GitHub Actions Secrets
 
 Azure Web App Environment Variables
 
-👨‍💻 Author
+Author
 
 Vivek
-🔗 GitHub: https://github.com/VivekVjai
+GitHub: https://github.com/VivekVjai
 
-📌 Project Repo: https://github.com/VivekVjai/multitenant-api
+Project Repo: https://github.com/VivekVjai/multitenant-api
